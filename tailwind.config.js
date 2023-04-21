@@ -20,6 +20,10 @@ export default {
       fontFamily: {
         ubuntu: ['Ubuntu', 'sans-serif'],
       },
+      backgroundImage: {
+        'hero-desk': "url('src/assets/bg-sidebar-desktop.svg')",
+        'hero-mob': "url('src/assets/bg-sidebar-mobile.svg')",
+      },
     },
   },
   plugins: [],
