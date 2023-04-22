@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { createContext, useState } from "react";
 
 export const StepContext = createContext({
   currentStep: 1,
-  handleChangeStep: (step: number) => { },
+  handleChangeStep: (_step: number) => { },
 });
 
 export function StepProvider({ children }: { children: React.ReactNode }) {
