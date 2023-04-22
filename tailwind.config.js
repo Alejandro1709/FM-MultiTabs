@@ -21,8 +21,8 @@ export default {
         ubuntu: ['Ubuntu', 'sans-serif'],
       },
       backgroundImage: {
-        'hero-desk': "url('src/assets/bg-sidebar-desktop.svg')",
-        'hero-mob': "url('src/assets/bg-sidebar-mobile.svg')",
+        'hero-desk': "url('/bg-sidebar-desktop.svg')",
+        'hero-mob': "url('/bg-sidebar-mobile.svg')",
       },
     },
   },
