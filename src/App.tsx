@@ -35,9 +35,9 @@ function App() {
       <Container>
         <Sidebar />
         <section className="flex-1 md:pt-[40px] md:pb-[10px] z-20 -translate-y-20 md:translate-y-0">
-          <article className="flex flex-col gap-[40px] max-w-[450px] mx-auto md:h-full md:shadow-none shadow-md bg-white rounded-lg md:py-0 md:px-0 py-[32px] px-[24px] md:rounded-none overflow-hidden">
+          <article className="flex flex-col gap-[25px] max-w-[450px] mx-auto md:h-full md:shadow-none shadow-md bg-white rounded-lg md:py-0 md:px-0 py-[32px] px-[24px] md:rounded-none">
             {currentStep === 1 ? renderStepHeader(0) : currentStep === 2 ? renderStepHeader(1) : null}
-            <form className="flex flex-col justify-between h-full">
+            <form className="flex flex-col justify-between gap-4 h-full">
               {currentStep === 1 ? <PersonalForm /> : currentStep === 2 ? <Plan /> : null}
               <TabFooter hidesOnMobile />
             </form>
