@@ -1,3 +1,4 @@
+import Toggle from './Toggle'
 import Game from '/icon-arcade.svg'
 
 function Plan() {
@@ -26,13 +27,7 @@ function Plan() {
           </div>
         </li>
       </ul>
-      <div className='flex justify-center items-center bg-background p-4 rounded-md'>
-        <div className='flex flex-row items-center gap-[24px]'>
-          <button className='text-denim font-medium'>Monthly</button>
-          <button className='bg-purple text-white rounded-full p-2'>Toggle</button>
-          <button className='text-grey font-medium'>Yearly</button>
-        </div>
-      </div>
+      <Toggle />
     </div>
   )
 }
