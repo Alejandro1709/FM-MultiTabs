@@ -1,7 +1,10 @@
+import { useState } from 'react'
 import Toggle from './Toggle'
 import Game from '/icon-arcade.svg'
 
 function Plan() {
+  const [isMonthly, setIsMonthly] = useState(true)
+
   return (
     <div className='flex flex-col gap-[24px]'>
       <ul className="flex flex-col gap-[20px]">
@@ -27,7 +30,7 @@ function Plan() {
           </div>
         </li>
       </ul>
-      <Toggle />
+      <Toggle isMonthly={isMonthly} onPlanChange={setIsMonthly} />
     </div>
   )
 }

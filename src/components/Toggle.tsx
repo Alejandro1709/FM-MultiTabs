@@ -1,12 +1,17 @@
-function Toggle() {
+type Props = {
+  isMonthly: boolean;
+  onPlanChange: (isMonthly: boolean) => void;
+};
+
+function Toggle({ isMonthly, onPlanChange }: Props) {
   return (
     <div className='flex justify-center items-center bg-background p-4 rounded-md'>
       <div className='flex flex-row items-center gap-[24px]'>
-        <button type="button" className="text-denim font-medium">Monthly</button>
-        <span className='bg-denim text-white rounded-full w-16 p-2'>
-          <div className="h-6 w-6 bg-white rounded-full translate-x-6" />
+        <button type="button" className={`${isMonthly ? "text-denim font-medium" : "text-grey font-medium"}`} onClick={() => onPlanChange(true)}>Monthly</button>
+        <span className='bg-denim text-white rounded-full w-16 p-2 transition-all'>
+          <div className={`${isMonthly ? "translate-x-0" : "translate-x-6"} h-6 w-6 bg-white rounded-full`} />
         </span>
-        <button type="button" className="text-grey font-medium">Yearly</button>
+        <button type="button" className={`${isMonthly ? "text-grey font-medium" : "text-denim font-medium"}`} onClick={() => onPlanChange(false)}>Yearly</button>
       </div>
     </div>
   )
