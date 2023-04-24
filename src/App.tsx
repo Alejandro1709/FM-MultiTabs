@@ -11,13 +11,13 @@ import useSteps from "./hooks/useSteps"
 function App() {
   const { currentStep } = useSteps()
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    plan: null,
-    addsOn: [],
-  })
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   phone: "",
+  //   plan: null,
+  //   addsOn: [],
+  // })
 
   const renderStepHeader = (step: number) => {
     return (
