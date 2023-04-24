@@ -1,5 +1,5 @@
-import type IPlan from "../types/plan";
 import ListItem from "./ListItem";
+import type IPlan from "../types/plan";
 
 type Props = {
   plans: IPlan[];
