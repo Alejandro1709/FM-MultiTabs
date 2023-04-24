@@ -1,32 +1,11 @@
 import Toggle from './Toggle'
-import Game from '/icon-arcade.svg'
+import List from './List'
+import plans from '../data/plans'
 
 function Plan() {
   return (
     <div className='flex flex-col gap-[24px]'>
-      <ul className="flex flex-col gap-[20px]">
-        <li className="flex gap-[14px] p-[14px] border border-purple rounded-md bg-background cursor-pointer">
-          <img src={Game} alt="Game icon" draggable={false} />
-          <div className="flex flex-col gap-[2px]">
-            <h2 className="text-denim font-bold text-lg">Arcade</h2>
-            <p className="text-grey">$9/mo</p>
-          </div>
-        </li>
-        <li className="flex gap-[14px] p-[14px] border border-purple rounded-md bg-background cursor-pointer">
-          <img src={Game} alt="Game icon" draggable={false} />
-          <div className="flex flex-col gap-[2px]">
-            <h2 className="text-denim font-bold text-lg">Arcade</h2>
-            <p className="text-grey">$9/mo</p>
-          </div>
-        </li>
-        <li className="flex gap-[14px] p-[14px] border border-purple rounded-md bg-background cursor-pointer">
-          <img src={Game} alt="Game icon" draggable={false} />
-          <div className="flex flex-col gap-[2px]">
-            <h2 className="text-denim font-bold text-lg">Arcade</h2>
-            <p className="text-grey">$9/mo</p>
-          </div>
-        </li>
-      </ul>
+      <List plans={plans} />
       <Toggle />
     </div>
   )

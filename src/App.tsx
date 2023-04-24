@@ -1,25 +1,23 @@
+import { useState } from "react"
 import Container from "./components/Container"
 import Layout from "./components/Layout"
 import PersonalForm from "./components/PersonalForm"
 import Plan from "./components/Plan"
 import Sidebar from "./components/Sidebar"
 import TabFooter from "./components/TabFooter"
+import stepsData from "./data/steps"
 import useSteps from "./hooks/useSteps"
-import type IStep from "./types/step"
-
-const stepsData: IStep[] = [
-  {
-    title: "Personal Info",
-    subtitle: "Please provide your name, email address, and phone number.",
-  },
-  {
-    title: "Select your plan",
-    subtitle: "You have the option of monthly or yearly billing.",
-  }
-]
 
 function App() {
   const { currentStep } = useSteps()
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    plan: null,
+    addsOn: [],
+  })
 
   const renderStepHeader = (step: number) => {
     return (
