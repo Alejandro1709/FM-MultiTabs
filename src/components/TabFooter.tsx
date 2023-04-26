@@ -1,4 +1,4 @@
-import useSteps from "../hooks/useSteps";
+import useStepStore from "../stores/stepStore";
 
 type TabFooterProps = {
   isFixed?: boolean;
@@ -6,7 +6,8 @@ type TabFooterProps = {
 };
 
 function TabFooter({ isFixed = false, hidesOnMobile = false }: TabFooterProps) {
-  const { currentStep, handleChangeStep } = useSteps()
+  const currentStep = useStepStore(state => state.currentStep);
+  const handleChangeStep = useStepStore(state => state.handleChangeStep);
 
   return (
     <div className={`${isFixed ? 'md:hidden fixed bottom-0 bg-white p-6 w-full' : 'md:flex flex-row justify-between items-center'} ${hidesOnMobile ? 'hidden' : 'flex flex-row justify-between items-center'}`}>

@@ -1,12 +1,13 @@
 import Tab from "./Tab"
-import useSteps from "../hooks/useSteps";
+import useStepStore from "../stores/stepStore";
 
 type TabsProps = {
   hidesOnMobile?: boolean;
 };
 
 function Tabs({ hidesOnMobile = false }: TabsProps) {
-  const { currentStep, handleChangeStep } = useSteps()
+  const currentStep = useStepStore(state => state.currentStep);
+  const handleChangeStep = useStepStore(state => state.handleChangeStep);
 
   return (
     <ul className={`flex md:flex-col flex-row gap-[16px] justify-center  md:gap-[32px] md:ml-[32px] mt-[25px] md:mt-[40px] transition-all ${hidesOnMobile ? 'hidden' : 'flex'}`} role="navigation">

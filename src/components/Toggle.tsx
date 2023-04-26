@@ -1,7 +1,8 @@
-import { useToggle } from "../hooks/useToggle"
+import useToggleStore from "../stores/toggleStore"
 
 function Toggle() {
-  const { isMonthly, setIsMonthly } = useToggle()
+  const isMonthly = useToggleStore(state => state.isMonthly)
+  const setIsMonthly = useToggleStore(state => state.setIsMonthly)
 
   return (
     <div className='flex justify-center items-center bg-background p-4 rounded-md'>

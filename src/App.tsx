@@ -1,4 +1,3 @@
-import { useState } from "react"
 import Container from "./components/Container"
 import Layout from "./components/Layout"
 import PersonalForm from "./components/PersonalForm"
@@ -6,18 +5,10 @@ import Plan from "./components/Plan"
 import Sidebar from "./components/Sidebar"
 import TabFooter from "./components/TabFooter"
 import stepsData from "./data/steps"
-import useSteps from "./hooks/useSteps"
+import useStepStore from "./stores/stepStore"
 
 function App() {
-  const { currentStep } = useSteps()
-
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   email: "",
-  //   phone: "",
-  //   plan: null,
-  //   addsOn: [],
-  // })
+  const currentStep = useStepStore(state => state.currentStep);
 
   const renderStepHeader = (step: number) => {
     return (
