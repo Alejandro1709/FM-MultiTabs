@@ -7,7 +7,6 @@ const plans: IPlan[] = [
     monthlyPrice: 9,
     yearlyPrice: 90,
     icon: '/icon-arcade.svg',
-    active: false,
   },
   {
     id: 2,
@@ -15,7 +14,6 @@ const plans: IPlan[] = [
     monthlyPrice: 12,
     yearlyPrice: 120,
     icon: '/icon-advanced.svg',
-    active: false,
   },
   {
     id: 3,
@@ -23,7 +21,6 @@ const plans: IPlan[] = [
     monthlyPrice: 15,
     yearlyPrice: 150,
     icon: '/icon-pro.svg',
-    active: false,
   }
 ];
 
