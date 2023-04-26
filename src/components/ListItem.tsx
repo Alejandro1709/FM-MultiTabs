@@ -1,5 +1,5 @@
 import { usePlans } from "../hooks/usePlans";
-import { useToggle } from "../hooks/useToggle";
+import useToggleStore from "../stores/toggleStore";
 import type IPlan from "../types/plan";
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
 function ListItem({ plan, onSelect }: Props) {
   const { selectedPlan } = usePlans()
 
-  const { isMonthly } = useToggle()
+  const isMonthly = useToggleStore(state => state.isMonthly)
   const formattedPrice = isMonthly ? `${plan.monthlyPrice}/mo` : `${plan.yearlyPrice}/yr`
 
   return (
