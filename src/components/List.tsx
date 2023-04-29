@@ -1,25 +1,25 @@
-import ListItem from "./ListItem";
-import usePlanStore from "../stores/planStore";
-import type IPlan from "../types/plan";
+import ListItem from './ListItem';
+import usePlanStore from '../stores/planStore';
+import type IPlan from '../types/plan';
 
 function List() {
-  const plans = usePlanStore(state => state.plans)
-  const selectedPlan = usePlanStore(state => state.selectedPlan)
-  const setSelectedPlan = usePlanStore(state => state.setSelectedPlan)
-  const resetSelectedPlan = usePlanStore(state => state.resetSelectedPlan)
+  const plans = usePlanStore((state) => state.plans);
+  const selectedPlan = usePlanStore((state) => state.selectedPlan);
+  const setSelectedPlan = usePlanStore((state) => state.setSelectedPlan);
+  const resetSelectedPlan = usePlanStore((state) => state.resetSelectedPlan);
 
   const handleSelect = (planId: number) => {
-    const plan: IPlan | undefined = plans.find((plan) => plan.id === planId)
+    const plan: IPlan | undefined = plans.find((plan) => plan.id === planId);
 
-    if (!plan) return
+    if (!plan) return;
 
     // check if plan is already selected
     if (selectedPlan?.id === plan.id) {
-      return resetSelectedPlan()
+      return resetSelectedPlan();
     }
 
-    setSelectedPlan(plan)
-  }
+    setSelectedPlan(plan);
+  };
 
   return (
     <>
@@ -32,7 +32,7 @@ function List() {
         ))}
       </ul>
     </>
-  )
+  );
 }
 
-export default List
+export default List;

@@ -1,8 +1,8 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
 type StepStore = {
-  currentStep: number,
-  handleChangeStep: (step: number) => void,
+  currentStep: number;
+  handleChangeStep: (step: number) => void;
 };
 
 const useStepStore = create<StepStore>((set) => ({

@@ -1,14 +1,14 @@
-import type IStep from "../types/step";
+import type IStep from '../types/step';
 
 const stepsData: IStep[] = [
   {
-    title: "Personal Info",
-    subtitle: "Please provide your name, email address, and phone number.",
+    title: 'Personal Info',
+    subtitle: 'Please provide your name, email address, and phone number.',
   },
   {
-    title: "Select your plan",
-    subtitle: "You have the option of monthly or yearly billing.",
-  }
-]
+    title: 'Select your plan',
+    subtitle: 'You have the option of monthly or yearly billing.',
+  },
+];
 
-export default stepsData
+export default stepsData;

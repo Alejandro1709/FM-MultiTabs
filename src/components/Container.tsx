@@ -4,10 +4,10 @@ type ContainerProps = {
 
 function Container({ children }: ContainerProps) {
   return (
-    <div className="flex flex-col md:flex-row md:bg-white md:p-[16px] md:shadow-md md:h-[620px] flex-1 md:max-w-[940px] md:rounded-xl">
+    <div className="flex flex-1 flex-col md:h-[620px] md:max-w-[940px] md:flex-row md:rounded-xl md:bg-white md:p-[16px] md:shadow-md">
       {children}
     </div>
-  )
+  );
 }
 
-export default Container
+export default Container;

@@ -1,13 +1,13 @@
-import { create } from "zustand";
-import plans from "../data/plans";
-import type IPlan from "../types/plan";
+import { create } from 'zustand';
+import plans from '../data/plans';
+import type IPlan from '../types/plan';
 
 type PlanStore = {
-  plans: IPlan[]
-  selectedPlan: IPlan | null
-  setPlans: (plans: IPlan[]) => void
-  setSelectedPlan: (plan: IPlan) => void
-  resetSelectedPlan: () => void
+  plans: IPlan[];
+  selectedPlan: IPlan | null;
+  setPlans: (plans: IPlan[]) => void;
+  setSelectedPlan: (plan: IPlan) => void;
+  resetSelectedPlan: () => void;
 };
 
 const usePlanStore = create<PlanStore>((set) => ({

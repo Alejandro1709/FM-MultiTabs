@@ -7,14 +7,20 @@ type TabProps = {
 
 function Tab({ step, title, active = false, onClick }: TabProps) {
   return (
-    <li className="flex items-center self-start gap-[20px] uppercase cursor-pointer" onClick={onClick}>
-      <span className={`grid place-content-center font-bold ${active ? 'bg-skyBlue text-denim' : 'text-white bg-transparent border-2 border-white'} h-12 w-12 rounded-full`}>{step}</span>
-      <div className="hidden md:block text-base/6">
-        <h3 className="text-skyBlue font-thin text-sm">Step {step}</h3>
+    <li className="flex cursor-pointer items-center gap-[20px] self-start uppercase" onClick={onClick}>
+      <span
+        className={`grid place-content-center font-bold ${
+          active ? 'bg-skyBlue text-denim' : 'border-2 border-white bg-transparent text-white'
+        } h-12 w-12 rounded-full`}
+      >
+        {step}
+      </span>
+      <div className="hidden text-base/6 md:block">
+        <h3 className="text-sm font-thin text-skyBlue">Step {step}</h3>
         <h2 className="font-bold text-white">{title}</h2>
       </div>
     </li>
-  )
+  );
 }
 
-export default Tab
+export default Tab;

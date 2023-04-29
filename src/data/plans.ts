@@ -1,4 +1,4 @@
-import type IPlan from "../types/plan";
+import type IPlan from '../types/plan';
 
 const plans: IPlan[] = [
   {
@@ -21,7 +21,7 @@ const plans: IPlan[] = [
     monthlyPrice: 15,
     yearlyPrice: 150,
     icon: '/icon-pro.svg',
-  }
+  },
 ];
 
 export default plans;

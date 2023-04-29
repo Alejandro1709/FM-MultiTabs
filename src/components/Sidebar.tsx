@@ -1,11 +1,11 @@
-import Tabs from "./Tabs"
+import Tabs from './Tabs';
 
 function Sidebar() {
   return (
-    <aside className="md:w-[274px] h-[172px] md:h-full bg-hero-mob bg-no-repeat bg-cover bg-center md:bg-hero-desk md:rounded-md">
+    <aside className="h-[172px] bg-hero-mob bg-cover bg-center bg-no-repeat md:h-full md:w-[274px] md:rounded-md md:bg-hero-desk">
       <Tabs />
     </aside>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;

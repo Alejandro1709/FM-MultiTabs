@@ -1,32 +1,32 @@
-import Container from "./components/Container"
-import Layout from "./components/Layout"
-import PersonalForm from "./components/PersonalForm"
-import Plan from "./components/Plan"
-import Sidebar from "./components/Sidebar"
-import TabFooter from "./components/TabFooter"
-import stepsData from "./data/steps"
-import useStepStore from "./stores/stepStore"
+import Container from './components/Container';
+import Layout from './components/Layout';
+import PersonalForm from './components/PersonalForm';
+import Plan from './components/Plan';
+import Sidebar from './components/Sidebar';
+import TabFooter from './components/TabFooter';
+import stepsData from './data/steps';
+import useStepStore from './stores/stepStore';
 
 function App() {
-  const currentStep = useStepStore(state => state.currentStep);
+  const currentStep = useStepStore((state) => state.currentStep);
 
   const renderStepHeader = (step: number) => {
     return (
       <header className="flex flex-col gap-[4px]">
-        <h1 className="text-denim font-bold text-3xl">{stepsData[step].title}</h1>
+        <h1 className="text-3xl font-bold text-denim">{stepsData[step].title}</h1>
         <p className="text-grey">{stepsData[step].subtitle}</p>
       </header>
-    )
+    );
   };
 
   return (
     <Layout>
       <Container>
         <Sidebar />
-        <section className="flex-1 md:pt-[40px] md:pb-[10px] z-20 -translate-y-20 md:translate-y-0">
-          <article className="flex flex-col gap-[25px] max-w-[450px] mx-auto md:h-full md:shadow-none shadow-md bg-white rounded-lg md:py-0 md:px-0 py-[32px] px-[24px] md:rounded-none">
+        <section className="z-20 flex-1 -translate-y-20 md:translate-y-0 md:pb-[10px] md:pt-[40px]">
+          <article className="mx-auto flex max-w-[450px] flex-col gap-[25px] rounded-lg bg-white px-[24px] py-[32px] shadow-md md:h-full md:rounded-none md:px-0 md:py-0 md:shadow-none">
             {currentStep === 1 ? renderStepHeader(0) : currentStep === 2 ? renderStepHeader(1) : null}
-            <form className="flex flex-col justify-between gap-4 h-full">
+            <form className="flex h-full flex-col justify-between gap-4">
               {currentStep === 1 ? <PersonalForm /> : currentStep === 2 ? <Plan /> : null}
               <TabFooter hidesOnMobile />
             </form>
@@ -35,7 +35,7 @@ function App() {
       </Container>
       <TabFooter isFixed />
     </Layout>
-  )
+  );
 }
 
-export default App
+export default App;

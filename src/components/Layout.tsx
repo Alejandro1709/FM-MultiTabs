@@ -3,11 +3,7 @@ type LayoutProps = {
 };
 
 function Layout({ children }: LayoutProps) {
-  return (
-    <main className="relative flex md:justify-center md:items-center min-h-screen bg-background">
-      {children}
-    </main>
-  )
+  return <main className="relative flex min-h-screen bg-background md:items-center md:justify-center">{children}</main>;
 }
 
-export default Layout
+export default Layout;
