@@ -16,7 +16,9 @@ function ListItem({ plan, onSelect }: Props) {
   return (
     <li
       className={`flex gap-[14px] border p-[14px] ${
-        selectedPlan !== null ? 'border-purple bg-background' : 'border-gray-300 bg-white'
+        selectedPlan !== null && selectedPlan.id === plan.id
+          ? 'border-purple bg-background'
+          : 'border-gray-300 bg-white'
       } cursor-pointer rounded-md`}
       onClick={() => onSelect(+plan.id)}
     >
