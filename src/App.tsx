@@ -1,3 +1,4 @@
+import Addons from './components/Addons';
 import Container from './components/Container';
 import Layout from './components/Layout';
 import PersonalForm from './components/PersonalForm';
@@ -25,9 +26,21 @@ function App() {
         <Sidebar />
         <section className="z-20 flex-1 -translate-y-20 md:translate-y-0 md:pb-[10px] md:pt-[40px]">
           <article className="mx-auto flex max-w-[450px] flex-col gap-[25px] rounded-lg bg-white px-[24px] py-[32px] shadow-md md:h-full md:rounded-none md:px-0 md:py-0 md:shadow-none">
-            {currentStep === 1 ? renderStepHeader(0) : currentStep === 2 ? renderStepHeader(1) : null}
+            {currentStep === 1
+              ? renderStepHeader(0)
+              : currentStep === 2
+              ? renderStepHeader(1)
+              : currentStep === 3
+              ? renderStepHeader(2)
+              : null}
             <form className="flex h-full flex-col justify-between gap-4">
-              {currentStep === 1 ? <PersonalForm /> : currentStep === 2 ? <Plan /> : null}
+              {currentStep === 1 ? (
+                <PersonalForm />
+              ) : currentStep === 2 ? (
+                <Plan />
+              ) : currentStep === 3 ? (
+                <Addons />
+              ) : null}
               <TabFooter hidesOnMobile />
             </form>
           </article>
