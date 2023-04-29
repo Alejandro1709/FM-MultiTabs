@@ -5,4 +5,5 @@ export default interface IPlan {
   monthlyPrice: number;
   yearlyPrice: number;
   icon?: string;
+  active?: boolean;
 }
