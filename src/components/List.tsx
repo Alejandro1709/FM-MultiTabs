@@ -13,7 +13,6 @@ function List() {
 
     if (!plan) return;
 
-    // check if plan is already selected
     if (selectedPlan?.id === plan.id) {
       return resetSelectedPlan();
     }
@@ -22,16 +21,11 @@ function List() {
   };
 
   return (
-    <>
-      {/* <p className="p-2 bg-background rounded-md text-xs">
-        {JSON.stringify(selectedPlan)}
-      </p> */}
-      <ul className="flex flex-col gap-[20px]">
-        {plans.map((plan) => (
-          <ListItem key={plan.id} plan={plan} onSelect={handleSelect} />
-        ))}
-      </ul>
-    </>
+    <ul className="flex flex-col gap-[20px]">
+      {plans.map((plan) => (
+        <ListItem key={plan.id} plan={plan} onSelect={handleSelect} />
+      ))}
+    </ul>
   );
 }
 
