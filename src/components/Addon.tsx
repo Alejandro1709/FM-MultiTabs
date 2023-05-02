@@ -14,12 +14,11 @@ function Addon({ addon, activeAddOn, onSelect }: AddonProps) {
 
   return (
     <li
-      className={`flex cursor-pointer gap-[20px] ${
-        activeAddOn ? 'border border-gray-300 bg-background' : 'border border-gray-300 bg-white'
-      } rounded-md p-[14px]`}
+      className={`flex cursor-pointer gap-[20px] ${activeAddOn ? 'border border-gray-300 bg-background' : 'border border-gray-300 bg-white'
+        } rounded-md p-[14px]`}
       onClick={() => onSelect(+addon.id)}
     >
-      <Checkbox />
+      <Checkbox active={activeAddOn} />
       <div className="flex flex-col gap-[2px]">
         <h2 className="text-lg font-bold text-denim">{addon.name}</h2>
         <p className="text-grey">{addon.description}</p>
